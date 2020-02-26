@@ -15,10 +15,11 @@ function get(url) {
 async function execute(config, module, ...routeParams) {
   const rootUrl = config.rootUrl;
   const { method, url, analysis } = module;
-  const html  = await get(rootUrl + url(routeParams));
+  const html = await get(rootUrl + url(...routeParams));
   return analysis(html);
 }
 
 module.exports = {
-  get,execute
+  get,
+  execute
 };
