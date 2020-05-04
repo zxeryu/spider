@@ -19,7 +19,25 @@ async function execute(config, module, ...routeParams) {
   return analysis(html);
 }
 
+function download(url) {
+  return new Promise((resolve, reject) => {
+    axios({
+      url,
+      method: "GET",
+      responseType: "stream", // important
+    })
+      .then(res => {
+        resolve(res);
+      })
+      .catch(err => {
+        reject(err);
+        console.error(err);
+      });
+  });
+}
+
 module.exports = {
   get,
-  execute
+  execute,
+  download
 };

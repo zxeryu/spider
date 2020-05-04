@@ -18,18 +18,18 @@ async function start() {
   //根据字母顺序获取歌手ids
   // const data = await execute(config, SingerList, 'dalunv','e');
   //根据singerId获取songIds
-  // const data = await execute(config, SongList, "2263");
+  // const data = await execute(config, SongList, "798");
   //根据songId获取song detail
   // const data = await execute(config, SongDetail, "188060");
   //根据songId获取album list
   // const data = await execute(config, Album, "2263");
   //根据albumId获取song ids
-  // const data = await execute(config, AlbumSongList, "141375");
+  // const data = await execute(config, AlbumSongList, "798");
   // 根据singerId获取singer detail
-  const data = await execute(config, SingerDetail, "2263");
+  // const data = await execute(config, SingerDetail, "2263");
 
   console.log("--------------------------");
-  console.log(data);
+  // console.log(data);
   console.log("--------------------------");
 }
 
